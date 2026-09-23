@@ -3,50 +3,74 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Rare Beauty — Landing Page</title>
+<title>Rare Beauty — Nhận ưu đãi</title>
 <style>
-:root{--pink:#f5c8d5;--rose:#c96f8a;--cream:#fffaf7;--ink:#2d2025;--muted:#725f67;--line:#eadde1}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
-a{text-decoration:none;color:inherit}.nav{height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 6%;background:#fffaf8;position:sticky;top:0;z-index:10;border-bottom:1px solid #f0e5e8}.logo{font-family:Georgia,serif;font-size:28px;font-weight:700}.navlinks{display:flex;gap:28px;font-size:14px}.navlinks a:hover{color:var(--rose)}
-.hero{min-height:650px;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:70px 8%;background:linear-gradient(135deg,#fff8f7 0%,#f8d7df 100%);overflow:hidden}.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--rose);font-weight:700}.hero h1{font:700 clamp(48px,6vw,84px)/.95 Georgia,serif;margin:16px 0}.hero p{max-width:530px;color:var(--muted);font-size:18px}.buttons{display:flex;gap:14px;margin-top:30px}.btn{padding:14px 24px;border-radius:999px;border:1px solid var(--ink);font-weight:700}.btn.primary{background:var(--ink);color:#fff}.btn.secondary{background:#fff8f7}.hero-art{display:flex;justify-content:center;align-items:center}.photo-frame{width:min(440px,90%);height:520px;border-radius:34px;overflow:hidden;position:relative;box-shadow:28px 28px 60px #8d536633;transform:rotate(2deg);background:#ead3d8}.photo-frame img{width:100%;height:100%;object-fit:cover}.photo-badge{position:absolute;left:22px;bottom:22px;padding:13px 17px;border-radius:18px;background:#fffdfbdd;font:700 15px Georgia;letter-spacing:1px}.section{padding:90px 8%}.center{text-align:center}.center p{max-width:650px;margin:0 auto;color:var(--muted)}h2{font:700 46px Georgia,serif;margin:8px 0 18px}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;transition:.2s}.card:hover{transform:translateY(-5px);box-shadow:0 15px 35px #3d253010}.product-img{height:260px;border-radius:16px;overflow:hidden;background:#f7d7df;position:relative}.product-img img{width:100%;height:100%;object-fit:cover;display:block;transition:.35s}.card:hover .product-img img{transform:scale(1.04)}.product-label{position:absolute;left:14px;bottom:14px;padding:7px 11px;border-radius:999px;background:#ffffffdd;font-size:11px;font-weight:800;letter-spacing:1px}.card h3{margin:18px 0 4px;font:700 25px Georgia}.price{color:var(--rose);font-weight:800}.story{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;background:#f7e6e9}.quote{font:italic 28px Georgia;color:#5e4650}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:28px}.stat{padding:22px;background:#fff;border-radius:18px;text-align:center}.stat strong{display:block;font:700 30px Georgia}.newsletter{background:#2d2025;color:#fff;text-align:center;border-radius:30px;padding:70px 20px}.newsletter p{color:#d8c8ce}.form{display:flex;max-width:520px;margin:28px auto 0;gap:10px}.form input{flex:1;padding:15px 18px;border:0;border-radius:999px}.form button{padding:15px 24px;border:0;border-radius:999px;background:var(--pink);font-weight:800}.footer{padding:35px 8%;display:flex;justify-content:space-between;color:var(--muted);font-size:13px}
-@media(max-width:800px){.navlinks{display:none}.hero,.story{grid-template-columns:1fr}.hero-art{margin-top:60px}.products{grid-template-columns:1fr}.section{padding:65px 6%}.stats{grid-template-columns:1fr}.form{flex-direction:column}.footer{flex-direction:column;gap:10px}}
+:root{--pink:#d85f72;--dark:#292323;--muted:#756a6a;--bg:#fff8f5;--line:#eadbda}
+*{box-sizing:border-box}body{margin:0;font-family:'Arial',sans-serif;background:var(--bg);color:var(--dark);line-height:1.6}
+.container{width:min(1100px,92%);margin:auto}nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Arial',sans-serif;font-size:24px;font-weight:700;letter-spacing:-.5px}.logo span,h1 span{color:var(--pink)}
+nav a{background:var(--dark);color:#fff;padding:10px 20px;border-radius:30px;text-decoration:none;font-family:'Arial',sans-serif;font-weight:700;line-height:1}
+.hero{padding:65px 0 80px}.grid{display:grid;grid-template-columns:1fr .85fr;gap:55px;align-items:center}
+.badge{display:inline-block;background:#f8dfe3;color:#b94358;padding:7px 14px;border-radius:30px;font-size:13px;font-weight:bold}
+h1{font-size:clamp(42px,6vw,68px);line-height:1.03;letter-spacing:-3px;margin:18px 0}
+.hero>p,.left>p{font-size:18px;color:var(--muted);max-width:600px}.bullets{margin:25px 0}.bullet{margin:11px 0;font-weight:bold}.check{display:inline-grid;place-items:center;width:23px;height:23px;border-radius:50%;background:var(--pink);color:white;margin-right:8px}
+.card{background:white;padding:32px;border-radius:26px;box-shadow:0 20px 60px #522f331f;border:1px solid var(--line)}
+.card h2{margin:0 0 5px;font-size:28px}.card p{color:var(--muted);font-size:14px}
+label{display:block;font-size:13px;font-weight:bold;margin:14px 0 6px}
+input,select{width:100%;padding:14px;border:1px solid var(--line);border-radius:11px;font-size:15px}
+button{width:100%;height:64px;border:0;background:var(--pink);color:#fff;padding:0 18px;border-radius:14px;font-family:'Arial',sans-serif;font-size:16px;font-weight:700;line-height:1;letter-spacing:0;text-align:center;white-space:nowrap;display:flex;align-items:center;justify-content:center;margin-top:20px;cursor:pointer}
+.consent{font-size:11px!important}.success{display:none;text-align:center;padding:35px 5px}.success .icon{font-size:45px}
+.trust,.benefits{padding:65px 0}.trust{background:#fff}.trustgrid,.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.trustitem,.benefit{padding:25px;border:1px solid var(--line);border-radius:18px}.trustitem strong{font-size:18px}.trustitem p,.benefit p{color:var(--muted);font-size:14px}
+.title{text-align:center;max-width:650px;margin:0 auto 35px}.title h2{font-size:38px;margin:0 0 8px}.title p{color:var(--muted)}
+.cta{padding:70px 0;text-align:center}.cta div{background:var(--dark);color:white;border-radius:25px;padding:55px 20px}.cta h2{font-size:38px}.cta p{color:#ddd}.cta a{display:inline-flex;align-items:center;justify-content:center;background:white;color:var(--dark);padding:12px 24px;border-radius:30px;font-family:'Arial',sans-serif;font-weight:700;line-height:1;text-decoration:none}
+footer{padding:25px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+@media(max-width:800px){.grid,.trustgrid,.cards{grid-template-columns:1fr}.grid{gap:35px}nav a{display:none}}
 </style>
 </head>
 <body>
-<nav class="nav">
-  <a class="logo" href="#">Rare Beauty</a>
-  <div class="navlinks"><a href="#products">Sản phẩm</a><a href="#story">Câu chuyện</a><a href="#contact">Đăng ký</a></div>
-  <a class="btn" href="https://www.rarebeauty.com/" target="_blank">Mua ngay ↗</a>
-</nav>
-
-<section class="hero">
-  <div>
-    <div class="eyebrow">Makeup • Made to feel good</div>
-    <h1>Beauty that<br>feels like you.</h1>
-    <p>Khám phá vẻ đẹp tự nhiên theo cách riêng của bạn với Rare Beauty — những sản phẩm makeup dễ dùng, giàu cảm hứng và được tạo ra để bạn cảm thấy thoải mái trong chính làn da của mình.</p>
-    <div class="buttons"><a class="btn primary" href="#products">Khám phá bộ sưu tập</a><a class="btn secondary" href="https://www.rarebeauty.com/" target="_blank">Website chính thức ↗</a></div>
-  </div>
-  <div class="hero-art hero-photo"><div class="photo-frame"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=85" alt="Makeup illustration"><div class="photo-badge">FEEL GOOD<br>IN YOUR SKIN</div></div></div>
-</section>
-
-<section class="section" id="products">
-  <div class="center"><div class="eyebrow">Best sellers</div><h2>Những item không thể bỏ qua</h2><p>Ba sản phẩm nổi bật lấy cảm hứng từ triết lý makeup đơn giản, dễ sử dụng và tôn lên nét riêng của bạn.</p></div>
-  <div class="products">
-    <article class="card"><div class="product-img"><img src="https://www.sephora.fr/on/demandware.static/-/Sites-sephora-master-catalog/default/dw8f7f2c4f/images/hi-res/SKU/602974/602974_01.jpg" alt="Rare Beauty Soft Pinch Liquid Blush"><div class="product-label">SOFT PINCH</div></div><h3>Soft Pinch Liquid Blush</h3><div class="price">$24</div><p>Má hồng dạng lỏng nổi tiếng với sắc màu dễ layer và hiệu ứng căng khỏe.</p><a class="btn" href="https://www.rarebeauty.com/products/soft-pinch-liquid-blush" target="_blank">Xem sản phẩm ↗</a></article>
-    <article class="card"><div class="product-img"><img src="https://www.rarebeauty.com/cdn/shop/files/Positive_Light_Silky_Touch_Highlighter_Flaunt_1.jpg?v=1714516120&width=800" alt="Rare Beauty Positive Light Highlighter"><div class="product-label">POSITIVE LIGHT</div></div><h3>Positive Light Highlighter</h3><div class="price">$25</div><p>Highlight bắt sáng mịn màng, tạo hiệu ứng glow tự nhiên cho makeup look.</p><a class="btn" href="https://www.rarebeauty.com/products/positive-light-silky-touch-highlighter" target="_blank">Xem sản phẩm ↗</a></article>
-    <article class="card"><div class="product-img"><img src="https://www.ohmyboxmx.com/cdn/shop/files/s2893386-main-zoom.webp?v=1748967349" alt="Rare Beauty Soft Pinch Tinted Lip Oil"><div class="product-label">TINTED LIP OIL</div></div><h3>Soft Pinch Tinted Lip Oil</h3><div class="price">$24</div><p>Lớp màu nhẹ, bóng và thoải mái — phù hợp cho makeup hằng ngày.</p><a class="btn" href="https://www.rarebeauty.com/products/soft-pinch-tinted-lip-oil" target="_blank">Xem sản phẩm ↗</a></article>
-  </div>
-</section>
-
-<section class="section story" id="story">
-  <div><div class="eyebrow">The rare story</div><h2>More than makeup.</h2><p class="quote">“Rare Beauty is about embracing what makes you different and celebrating what makes you unique.”</p><p>Rare Beauty xây dựng trải nghiệm làm đẹp xoay quanh sự chân thật, tính cá nhân và cảm giác tự tin. Không cần che giấu bản thân — makeup có thể là cách để thể hiện bạn.</p><a class="btn primary" href="https://www.rarebeauty.com/pages/rare-impact" target="_blank">Tìm hiểu Rare Impact ↗</a></div>
-  <div><div class="stats"><div class="stat"><strong>01</strong><span>Easy to use</span></div><div class="stat"><strong>02</strong><span>Express yourself</span></div><div class="stat"><strong>03</strong><span>Feel good</span></div></div></div>
-</section>
-
-<section class="section" id="contact">
-  <div class="newsletter"><div class="eyebrow">Stay in the loop</div><h2>Join the Rare community.</h2><p>Nhận thông tin về sản phẩm, cảm hứng makeup và những câu chuyện mới.</p><form class="form" onsubmit="event.preventDefault();alert('Cảm ơn bạn đã đăng ký!');"><input type="email" placeholder="Email của bạn" required><button>Đăng ký</button></form></div>
-</section>
-
-<footer class="footer"><span>© 2026 Rare Beauty-inspired landing page</span><span>Thiết kế demo • <a href="https://www.rarebeauty.com/" target="_blank">rarebeauty.com ↗</a></span></footer>
-</body>
-</html>
+<header><div class="container"><nav><div class="logo">Rare <span>Beauty</span></div><a href="#form">Nhận ưu đãi</a></nav></div></header>
+<main>
+<section class="hero"><div class="container grid">
+<div class="left">
+<span class="badge">ƯU ĐÃI DÀNH RIÊNG CHO BẠN</span>
+<h1>Đăng ký để nhận <span>ưu đãi</span> đầu tiên.</h1>
+<p>Để lại thông tin để nhận thông báo về sản phẩm mới, chương trình ưu đãi và nội dung phù hợp với nhu cầu của bạn.</p>
+<div class="bullets">
+<div class="bullet"><span class="check">✓</span>Nhận mã ưu đãi độc quyền</div>
+<div class="bullet"><span class="check">✓</span>Cập nhật sản phẩm và chương trình mới</div>
+<div class="bullet"><span class="check">✓</span>Được tư vấn theo nhu cầu</div>
+</div>
+<p style="font-size:12px">Thông tin chỉ được sử dụng cho mục đích liên hệ và chăm sóc khách hàng theo chính sách của thương hiệu.</p>
+</div>
+<div class="card" id="form">
+<div id="formContent"><h2>Nhận ưu đãi ngay</h2><p>Điền thông tin bên dưới — chỉ mất khoảng 30 giây.</p>
+<form id="leadForm">
+<label>Họ và tên *</label><input name="name" placeholder="Nguyễn Văn A" required>
+<label>Email *</label><input name="email" type="email" placeholder="you@example.com" required>
+<label>Số điện thoại</label><input name="phone" type="tel" placeholder="09xx xxx xxx">
+<label>Bạn quan tâm đến</label><select name="interest"><option value="">Chọn một nhu cầu</option><option>Sản phẩm mới</option><option>Khuyến mãi</option><option>Tư vấn sản phẩm</option><option>Hợp tác / đại lý</option></select>
+<button>NHẬN ƯU ĐÃI NGAY →</button>
+<p class="consent">Bằng việc gửi biểu mẫu, bạn đồng ý để thương hiệu liên hệ theo thông tin đã cung cấp.</p>
+</form></div>
+<div class="success" id="success"><div class="icon">🎉</div><h2>Đăng ký thành công!</h2><p>Cảm ơn bạn. Thông tin đã được ghi nhận.</p></div>
+</div>
+</div></section>
+<section class="trust"><div class="container trustgrid">
+<div class="trustitem"><strong>30 giây</strong><p>Hoàn thành biểu mẫu nhanh chóng.</p></div>
+<div class="trustitem"><strong>Ưu đãi riêng</strong><p>Nhận thông tin phù hợp với nhu cầu.</p></div>
+<div class="trustitem"><strong>Bảo mật</strong><p>Sử dụng dữ liệu đúng mục đích đã thông báo.</p></div>
+</div></section>
+<section class="benefits"><div class="container"><div class="title"><h2>Tại sao nên đăng ký?</h2><p>Landing page tập trung vào một mục tiêu: biến người truy cập thành khách hàng tiềm năng.</p></div>
+<div class="cards"><div class="benefit"><h3>🎁 Ưu đãi độc quyền</h3><p>Khách hàng để lại thông tin để nhận mã giảm giá hoặc quyền lợi riêng.</p></div>
+<div class="benefit"><h3>💌 Chăm sóc cá nhân</h3><p>Doanh nghiệp có thể dùng dữ liệu đăng ký để tư vấn và chăm sóc.</p></div>
+<div class="benefit"><h3>✨ Trải nghiệm đơn giản</h3><p>Form ngắn, CTA rõ ràng và nội dung tập trung giúp giảm phân tâm.</p></div></div></div></section>
+<section class="cta"><div class="container"><div><h2>Sẵn sàng nhận ưu đãi?</h2><p>Để lại thông tin để chúng tôi gửi ưu đãi và tư vấn phù hợp.</p><a href="#form">Đăng ký ngay</a></div></div></section>
+</main>
+<footer><div class="container">© 2026 Rare Beauty · Chính sách bảo mật · Điều khoản sử dụng</div></footer>
+<script>
+document.getElementById('leadForm').addEventListener('submit',function(e){
+e.preventDefault();document.getElementById('formContent').style.display='none';document.getElementById('success').style.display='block';
+});
+</script>
+</body></html>
